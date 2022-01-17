@@ -148,7 +148,7 @@ fetch('data.json')
             buttonClicked.parentElement.parentElement.remove();
             var countless = document.querySelector('.count').innerHTML = --count;
             if(countless ==  0){
-               location.href="phoneshop.html";
+               location.href="index.html";
             }
             updateCartTotal();
          }
