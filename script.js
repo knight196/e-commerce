@@ -349,7 +349,7 @@ var finalconfirm = document.querySelector('.finalconfirm')
 
 finalconfirm.addEventListener('click', () => {
 
-location.href="phoneshop.html";
+location.href="index.html";
 
 })
 
