@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js" defer></script>
+  <title>phoneshop</title>
+</head>
+
+<body>
+
+  <nav>
+
+    <div class="mobileflex">
+
+
+      <h1 class="tablinks" id="defaultOpen" onclick="tabchange(event, 'homepage')">Phoneshop</h1>
+
+      <div class="desktopbar">
+        <p class="tablinks" onclick="tabchange(event, 'homepage')">Home</p>
+        <p class="tablinks" onclick="tabchange(event, 'phonespage')">Phones</p>
+        <p>About Us</p>
+        <p>Contact Us</p>
+      </div>
+
+      <div class="bars">
+        <span class="tablinks" onclick="tabchange(event, 'form')"><i class="fas fa-user"></i></span>
+        <span class="tablinks" onclick="tabchange(event, 'basket')"><i class="fas fa-shopping-cart basketcount"><p class="count">0</p></i>
+        </span>
+        <span class="burgermenu"><i class="fas fa-bars"></i></span>
+      </div>
+    </div>
+
+    <div class="mobilebar">
+
+      <h1 class="tablinks" onclick="tabchange(event, 'phonespage')">Phone</h1>
+      <h1>About Us</h1>
+      <h1>Contact Us</h1>
+     
+    </div>
+
+
+  </nav>
+
+  <!--Searchbar for the specific item -->
+    <input type="text" class="tablinks" onclick="tabchange(event, 'phonessearchfilter')" placeholder="Search for the item" id="searchbar">
+
+<!--End of searchbar-->
+
+  <!--Homepage-->
+  <div class="tabcontent" id="homepage">
+    <!--Slideshow-->
+    <div class="slideshow-container">
+
+      <h1>New Arrival</h1>
+
+      <div class="mySlides slide1 fade">
+        <img src="./images/googlepixel.jpeg">
+        <p>Google Pixel 4a</p>
+        <p>£350</p>
+        <button class="searchphone" onclick="tabchange(event, 'google')">Buy Now</button>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./images/s10.jpg">
+        <p>Samsung S10</p>
+        <p>£400</p>
+        <button class="searchphone" onclick="tabchange(event, 'samsungten')">Buy Now</button>
+      </div>
+
+
+      <div class="mySlides fade">
+        <img src="./images/oneplus9.jpg">
+        <p>Oneplus9</p>
+        <p">£500</p>
+          <button class="searchphone" onclick="tabchange(event, 'oneplus9')">Buy Now</button>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div style="text-align:center;">
+        <span class="dot">
+          <div class="fill" onclick="currentSlide(1)"></div>
+        </span>
+        <span class="dot">
+          <div class="fill" onclick="currentSlide(2)"></div>
+        </span>
+        <span class="dot">
+          <div class="fill" onclick="currentSlide(3)"></div>
+        </span>
+      </div>
+
+    </div>
+
+    <!--End of Slideshow-->
+
+    <div class="fourgrid">
+
+      <div class="fourcard">
+        <div class="fourcard1">
+          <p>Samsung Galaxy S10</p>
+          <button class="fourcardbutton" onclick="tabchange(event,'samsungten')">Buy Now</button>
+        </div>
+      </div>
+      <div class="fourcard">
+        <div class="fourcard2">
+          <p>Oneplus 9</p>
+          <button class="fourcardbutton" onclick="tabchange(event,'oneplus9')">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="fourcard">
+        <div class="fourcard3">
+          <p>Huawei P40 Pro</p>
+          <button class="fourcardbutton" onclick="tabchange(event,'huaweip40')">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="fourcard">
+        <div class="fourcard4">
+          <p>Google Pixel 4a</p>
+          <button class="fourcardbutton" onclick="tabchange(event,'google')">Buy Now</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Subscribe to the newsletter-->
+
+    <div class="subscribe">
+      <h1>Subscribe to find out what's coming</h1>
+      <p>Sign up for our newsletter!</p>
+
+      <input type="text" placeholder="Email Address">
+    </div>
+
+    <!--End of newsletter-->
+
+    <div class="footerinfo">
+
+      <ul>
+        <h1>Company Info</h1>
+        <li>About Us</li>
+        <li>Blog</li>
+      </ul>
+
+      <ul>
+        <h1>Services & Support</h1>
+        <li>FAQ</li>
+        <li>Contact Us</li>
+        <li>Warranty</li>
+        <li>Delivery</li>
+        <li>Returns</li>
+      </ul>
+
+      <ul>
+        <h1>Security & Privacy</h1>
+        <li>Cookie Policy</li>
+        <li>Privacy Policy</li>
+        <li>Terms and Conditions</li>
+      </ul>
+
+    </div>
+
+  </div>
+  <!--End of Homepage-->
+
+  <!--Form-->
+
+  <div class="tabcontent" id="form">
+
+    <div class="formacc">
+    <div class="login">
+
+      <h1>login</h1>
+
+      <p>Email Address</p>
+      <input type="text" id="email2" placeholder="Enter your email address">
+      <p>Password</p>
+      <input type="password" class="input pwd1" id="password2" placeholder="Enter your password">
+      <br>
+      <input type="checkbox" onclick="pwdcheck1()">Show Password
+      <br>
+
+      <button id="login">Sign In</button>
+
+      <p>Don't have an account</p>
+
+      <button class="signup" id="createnewpage">Sign Up</button>
+
+    </div>
+
+    <div class="createac">
+
+      <h1>Sign Up</h1>
+
+      <p>Email Address</p>
+      <input type="text" id="email" placeholder="Enter your email address">
+      <p>Password</p>
+      <input type="password" class="input pwd" id="password" placeholder="Enter your password">
+      <p>Check Password</p>
+      <input type="password" class="input pwd" id="passwordcheck" placeholder="Enter your password">
+      <br>
+      <input type="checkbox" onclick="pwdcheck()">Show Password
+      <br>
+
+      <button id="signup">Sign Up</button>
+
+      <p>Already have an account</p>
+
+      <button class="signin" id="loginpage">Login</button>
+
+    </div>
+
+    </div>
+
+  </div>
+  <!--End of Form-->
+
+  <!--MobileDescription-->
+
+<div class="mobileinfo"></div>
+
+  <!--End of MobileDescription-->
+
+<!--Shopping Cart-->
+
+<div class="shoppingcart tabcontent" id="basket">
+
+  <h1>Cart</h1>
+
+  <div class="titlecart">
+   <h1>Item</h1>
+   <h1>Price</h1>
+   <h1>Quantity</h1>
+  </div>
+
+  <div class="shoppingcartitem"></div>
+
+  <div class="total">
+    <h1>Total:</h1>
+    <h2 class="carttotal">£0</h2>
+    </div>
+
+    <button class="btnpurchase tablinks" onclick="tabchange(event, 'payment')">Checkout</button>
+
+    </div>
+ 
+
+<!--End of Shopping Cart-->
+
+<!--phonessearch filter-->
+
+<div class="tabcontent" id="phonessearchfilter"></div>
+
+<!--End of phonessearch-->
+
+<!--Phones Page-->
+
+<div class="tabcontent" id="phonespage">
+
+<div class="filteroption">
+
+  <i class="fas fa-filter">Filter</i>
+
+  <div class="filterbox">
+
+  <div class="checkbox">
+    <label>
+        <input type="checkbox" rel="samsung" class="models" onchange="change()" /> Samsung</label>
+</div>
+
+<div class="checkbox">
+  <label>
+      <input type="checkbox" rel="google" class="models" onchange="change()" /> Google</label>
+</div>
+
+<div class="checkbox">
+<label>
+    <input type="checkbox" rel="oneplus" class="models" onchange="change()" /> Oneplus</label>
+</div>
+
+<div class="checkbox">
+<label>
+    <input type="checkbox" rel="huawei" class="models" onchange="change()" /> Huawei</label>
+</div>
+
+</div>
+
+<div class="filteringphone"></div>
+
+</div>
+
+</div>
+
+<!--End of phone page-->
+
+<!--Payment method-->
+
+<div class="payment tabcontent" id="payment">
+
+<h2>Payment</h2>
+<p>Accepted Cards</p>
+<div class="icon-container">
+  <i class="fa fa-cc-visa" style="color:navy;"></i>
+  <i class="fa fa-cc-amex" style="color:blue;"></i>
+  <i class="fa fa-cc-mastercard" style="color:red;"></i>
+  <i class="fa fa-cc-discover" style="color:orange;"></i>
+</div>
+
+<div class="paymentname">
+ 
+  <p>Name on Card</p>
+  <input type="text" placeholder="John More Doe">
+
+  <p>Credit card number</p>
+  <input type="text" placeholder="1111-2222-3333-4444">
+
+  <p>Exp Month</p>
+  <input type="text" placeholder="September">
+
+  <p>CVV</p>
+  <input type="text" placeholder="352">
+
+  <p>Exp Year</p>
+  <input type="text" placeholder="2018">
+
+</div>
+
+<div class="billingaddress">
+
+<h2>Billing Address</h2>
+
+<p>Full Name</p>
+<input type="text" placeholder="John More Doe">
+
+<p>Email</p>
+<input type="text" placeholder="john@example.com">
+
+<p>Address</p>
+<input type="text" placeholder="542 W.15th Street">
+
+<p>City</p>
+<input type="text" placeholder="LONDON">
+
+<p>Zip</p>
+<input type="text" placeholder="TW2 5LW">
+
+<p>State</p>
+<input type="text" placeholder="LN">
+
+</div>
+<br>
+
+<button class="tablinks" id="pay" onclick="tabchange(event, 'confirm')">Pay</button>
+
+
+</div>
+
+<!--End of payment method-->
+
+<!--Confirmation details-->
+
+<div class="confirmbox tabcontent" id="confirm">
+
+  <p>Thank you for purchasing with us. Your order confirmation will be with you soon.</p>
+
+  <button class="finalconfirm">OK</button>
+</div>
+
+<!--End of confirmation-->
+
+</body>
+
+</html>
