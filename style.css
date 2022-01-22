@@ -395,7 +395,7 @@ padding:10px 10px;
 
 #filteringgrid img{
   width:80%;
-  height:200px;
+  height:150px;
 }
 #filteringgrid button, .phonesearch button{
 background:darkcyan;
@@ -433,17 +433,25 @@ position: fixed;
   z-index:1;
   top:50%;
   left:30%;
+  display:none;
 }
 .confirmbox button{
   padding:10px 20px;
   border:none;
   margin:10px;
 }
-
+.btnpurchase{
+  display:none;
+}
 button{
   cursor: pointer;
 }
-
+.emptybasket {
+  display:none;
+}
+#fillbasket{
+  display:none;
+}
 @media screen and (min-width:720px){
   .mySlides img{
     width:60%;
@@ -489,6 +497,9 @@ button{
 }
 .item img{
 width:60%;
+}
+#filteringgrid img{
+  height:200px;
 }
 }
 @media screen and (min-width:1020px){
