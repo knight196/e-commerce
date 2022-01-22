@@ -148,7 +148,7 @@ fetch('data.json')
             buttonClicked.parentElement.parentElement.remove();
             var countless = document.querySelector('.count').innerHTML = --count;
             if(countless ==  0){
-               location.href="index.html";
+               location.href="phoneshop.html";
             }
             updateCartTotal();
          }
@@ -176,6 +176,9 @@ for(var i=0; i<cartbtn.length; i++){
    var imageSrc = shopItem.getElementsByClassName('itemimg')[0].src;
    addItemToCart(title,price,imageSrc);
    document.querySelector('.count').innerHTML = ++count;
+   document.querySelector('.btnpurchase').style.display="block";
+   document.getElementById('fillbasket').style.display="block";
+   document.getElementById('emptybasket').style.display="none";
    updateCartTotal();
 }
 
@@ -235,6 +238,13 @@ function updateCartTotal(){
    document.getElementsByClassName('carttotal')[0].innerText = '£' + total;
 }
 
+//payment show
+var btnpurchase = document.querySelector('.btnpurchase')
+
+btnpurchase.addEventListener('click', () => {
+   document.querySelector('.shoppingcart').style.display="none";
+document.querySelector('.payment').style.display="block";
+})
 
 //phones search filter
 const search = document.getElementById('searchbar')
@@ -343,15 +353,6 @@ results.forEach(function(result){
 })
 }
 change();
-
-//take the user back to homepage after the final payment
-var finalconfirm = document.querySelector('.finalconfirm')
-
-finalconfirm.addEventListener('click', () => {
-
-location.href="index.html";
-
-})
 
 //login and sign up
 
@@ -471,11 +472,83 @@ loginpage.addEventListener('click', () => {
 document.getElementById('pay').addEventListener('click', payment)
 
 function payment(){
-   
+
+   //credit card
+var credit = document.getElementById('creditCardNum').value;
+
+var visa = /^4[0-9]{12}(?:[0-9]{3})?$/;
+var  mastercard = /^5[1-5][0-9]{14}$/;
+
+//cvv
+var cvv = document.getElementById('cvv').value;
+var cvvcheck = /^[0-9]{3}$/;
+
+//expiration year
+var expyear = document.getElementById('year').value
+var expdate = new Date(expyear)
+
+//email
+var billemail = document.getElementById('billemail').value;
+var billregex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+//full name
+var name = document.getElementById('fullname').value;
+var regName = /^[a-zA-Z\s]+$/;
+
+//address
+var address = document.getElementById('address')
+
+//city
+var city = document.getElementById('city')
+
+
+//postcode
+var postcode = document.getElementById('zip');
+//name
+if(name== '' || !regName.test(name)){
+   alert('Please enter valid Name')
 }
+//card number
+else if(credit == ''){
+   alert('Please fill your card details')
+   if(credit.match(visa) || credit.match(mastercard)){
+      alert('Please enter a valid card details')
+   }
+}
+//cvv
+else if(cvv == '' || !cvvcheck.test(cvv)){
+   alert('Please check your card details')
+}
+//expyear
+else if(expyear == '' || expdate < new Date()){
+   alert('Please enter a valid year date')
+}
+//email
+else if(billemail == '' || !billregex.test(billemail)){
+   alert('Please enter your email id correctly')
+}
+//address
+else if(address == ''){
+   alert('Please enter your address')
+}
+//city
+else if(city == ''){
+   alert('Please enter a your city name')
+}
+//zip
+else if(postcode == ''){
+   alert('Please enter a valid postcode')
+}
+else{
+   document.querySelector('.confirmbox').style.display="block";
+}
+}
+//final confirmation box
+var finalconfirm = document.querySelector('.confirmbox')
 
-
-
+finalconfirm.addEventListener('click', () => {
+   location.href="phoneshop.html"
+})
 
 
 
