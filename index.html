@@ -235,6 +235,9 @@
 
 <div class="shoppingcart tabcontent" id="basket">
 
+<p1 id="emptybasket">Your Basket is empty</p1>
+
+  <div id="fillbasket">
   <h1>Cart</h1>
 
   <div class="titlecart">
@@ -250,7 +253,9 @@
     <h2 class="carttotal">£0</h2>
     </div>
 
-    <button class="btnpurchase tablinks" onclick="tabchange(event, 'payment')">Checkout</button>
+    </div>
+
+    <button class="btnpurchase">Checkout</button>
 
     </div>
  
@@ -322,16 +327,16 @@
   <input type="text" placeholder="John More Doe">
 
   <p>Credit card number</p>
-  <input type="text" placeholder="1111-2222-3333-4444">
+  <input id="creditCardNum" type="text" placeholder="1111-2222-3333-4444">
+  
+  <p>CVV</p>
+  <input id="cvv" type="text" placeholder="352">
 
   <p>Exp Month</p>
   <input type="text" placeholder="September">
 
-  <p>CVV</p>
-  <input type="text" placeholder="352">
-
-  <p>Exp Year</p>
-  <input type="text" placeholder="2018">
+<p>Exp Year</p>
+<input type="text" id="year" placeholder="2030">
 
 </div>
 
@@ -340,27 +345,24 @@
 <h2>Billing Address</h2>
 
 <p>Full Name</p>
-<input type="text" placeholder="John More Doe">
+<input id="fullname" type="text" placeholder="John More Doe">
 
 <p>Email</p>
-<input type="text" placeholder="john@example.com">
+<input id="billemail" type="text" placeholder="john@example.com">
 
-<p>Address</p>
-<input type="text" placeholder="542 W.15th Street">
+<p >Address</p>
+<input id="address"  type="text" placeholder="542 W.15th Street">
 
 <p>City</p>
-<input type="text" placeholder="LONDON">
+<input id="city" type="text" placeholder="LONDON">
 
-<p>Zip</p>
-<input type="text" placeholder="TW2 5LW">
-
-<p>State</p>
-<input type="text" placeholder="LN">
+<p >Zip</p>
+<input id="zip" type="text" placeholder="TW2 5LW">
 
 </div>
 <br>
 
-<button class="tablinks" id="pay" onclick="tabchange(event, 'confirm')">Pay</button>
+<button class="tablinks" id="pay">Pay</button>
 
 
 </div>
@@ -369,7 +371,7 @@
 
 <!--Confirmation details-->
 
-<div class="confirmbox tabcontent" id="confirm">
+<div class="confirmbox">
 
   <p>Thank you for purchasing with us. Your order confirmation will be with you soon.</p>
 
