@@ -26,6 +26,7 @@ function currentSlide(n){
 function showSlides(n) {
    var i;
    var slides = document.getElementsByClassName("mySlides");
+   //progress bar will be filled upon different slides
    var fills = document.getElementsByClassName("fill")
    if(n==undefined)
    {
@@ -64,6 +65,7 @@ function showSlides(n) {
 
  document.getElementById("defaultOpen").click();
 
+ //mobile description
 fetch('data.json')
 .then(res => res.json())
 .then(data => {
@@ -135,6 +137,7 @@ fetch('data.json')
          
          mobileinfo.innerHTML += card;
 
+         //shopping cart
          var count = 0;
 
          var removecart = document.getElementsByClassName('remove');
@@ -143,16 +146,19 @@ fetch('data.json')
             button.addEventListener('click', removeCartItem);
          }
 
+         //removing item on click
          function removeCartItem(event){
             var buttonClicked = event.target;
             buttonClicked.parentElement.parentElement.remove();
             var countless = document.querySelector('.count').innerHTML = --count;
+           //if countless is equal to 0 then go back to homepage
             if(countless ==  0){
-               location.href="index.html";
+               location.href="phoneshop.html";
             }
             updateCartTotal();
          }
 
+         //quantity is changed based on input value
          function quantityChanged(event){
             var input = event.target;
             if(isNaN(input.value) || input.value <= 0){
@@ -168,6 +174,7 @@ for(var i=0; i<cartbtn.length; i++){
    button.addEventListener('click', addToCartClicked)
 }
 
+//items will be added to the basket when add to cart is clicked
          function addToCartClicked(event){
    var button = event.target;
    var shopItem = button.parentElement;
@@ -182,6 +189,7 @@ for(var i=0; i<cartbtn.length; i++){
    updateCartTotal();
 }
 
+//added items will be shown in the basket based on product
 function addItemToCart(title,price,imageSrc){
    var cartRow = document.createElement('div')
    cartRow.classList.add('cartitem');
@@ -222,6 +230,7 @@ cartRow.getElementsByClassName('cartquantity')[0].addEventListener('change', qua
 
 })
 
+//total item will be calculated
 function updateCartTotal(){
    var cartItemContainer = document.getElementsByClassName('shoppingcartitem')[0];
    var cartitem = cartItemContainer.getElementsByClassName('cartitem');
@@ -309,6 +318,7 @@ var card = `
 
 <div class="${itemdata.filtername}" id="filteringgrid">
 <img src="${itemdata.images}">
+<p>${itemdata.price}</p>
 <br>
 <button onclick="tabchange(event, '${itemdata.tabname}')">Buy Now</button>
 
@@ -325,23 +335,26 @@ filteringphone.innerHTML += card;
 displayshow(data)
 });
 
-
-
+//filtering the item from checkbox list
 function change(){
    let results = Array.from(document.querySelectorAll('.filteringphone > div'))
    modelsChecked = document.querySelectorAll('.filterbox input.models:checked')
 
 
+   //when specific checkbox is clicked other items will be hidden
 results.forEach(function(result){
    result.style.display="none";
+
 });
 
 
 filterModels(modelsChecked)
 
 function filterModels(models){
+   //reduce the list of array when the user click on specific item from the list
    results = Array.from(models).reduce(function(sum, input) {
       const attrib = input.getAttribute('rel');
+      //concat the items when user clicks more than list of items.
       return sum.concat(results.filter(function(result) {
           return result.classList.contains(attrib);
       }))
@@ -350,6 +363,7 @@ function filterModels(models){
 
 results.forEach(function(result){
    result.style.display='block';
+   //only specific checkbox will be shown
 })
 }
 change();
@@ -428,7 +442,7 @@ login.addEventListener('click', () => {
 
    
     
-
+//show the password character
     function pwdcheck() {
       var x = document.querySelectorAll(".pwd");
       for(var i=0; i< x.length; i++){
@@ -547,8 +561,10 @@ else{
 var finalconfirm = document.querySelector('.confirmbox')
 
 finalconfirm.addEventListener('click', () => {
-   location.href="index.html"
+   location.href="phoneshop.html"
 })
+
+
 
 
 
