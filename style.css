@@ -6,6 +6,7 @@ margin:0;
 body{
     background:cadetblue;
 }
+/*Navbar*/
 .desktopbar{
     display:none;
 }
@@ -36,12 +37,15 @@ position: relative;
 .bars span{
   margin: 5px;
 }
+
+/*search filter*/
   #searchbar{
     width:100%;
     border:none;
     padding:10px;
   }
 
+/*slideshow*/
 
   .mySlides {
     display:none;
@@ -125,15 +129,19 @@ position: relative;
         display: inline-block;
       }
      
+/*progress bar*/
  .fill{
    background:coral;
    height:100%;
    width:0%;
  }
+ 
+/*when it is active*/
  .active{
    animation: fill 4s linear;
  }
 
+/*fill animation*/
  @keyframes fill{
    from{
      width:0%;
@@ -157,6 +165,8 @@ position: relative;
         to {opacity: 1;}
       }
 
+      
+/*four grid card*/
       .fourgrid{
         display:grid;
         grid-template-columns: auto;
@@ -234,6 +244,8 @@ position: relative;
         width:0;
         height:0;
     }
+    
+/*subscribe*/
     .subscribe{
       text-align: center;
       background:lightgrey;
@@ -246,6 +258,8 @@ position: relative;
       border:none;
       text-align: center;
     }
+    
+/*footer*/
     .footerinfo{
       text-align: center;
       padding:10px;
@@ -253,10 +267,13 @@ position: relative;
     .footerinfo ul{
       list-style:none;
     }
+    
+/*taboptions*/
     .tabcontent{
       display:none;
     }
 
+/*form account*/
     .formacc{
       text-align: center;
       display: flex;
@@ -277,6 +294,8 @@ position: relative;
     .createac{
       display:none;
     }
+    
+/*Mobile details*/
 .mobiledetails{
   text-align: center;
   display: flex;
@@ -295,6 +314,9 @@ position: relative;
     td{
       padding:10px;
     }
+
+    
+/*shopping cart*/
 .cartbtn{
   border:none;
   color:white;
@@ -366,6 +388,8 @@ padding:10px 10px;
   left:-10px;
   font-size: 15px;
 }
+
+/*filter on search by name*/
 .phonesearch{
   display: flex;
   flex-direction: column;
@@ -375,6 +399,8 @@ padding:10px 10px;
   width:50%;
   height:250px;
 }
+
+/*filtering option*/
 .filterbox{
   display:flex;
 }
@@ -410,6 +436,8 @@ border-radius: 5px;
   padding: 7px 0;
   font-size: 24px;
 }
+
+/*payment option*/
 .payment{
 background:darkgray;
 padding:10px;
@@ -452,6 +480,7 @@ button{
 #fillbasket{
   display:none;
 }
+
 @media screen and (min-width:720px){
   .mySlides img{
     width:60%;
