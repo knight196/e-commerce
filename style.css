@@ -591,7 +591,7 @@ width:60%;
         display:none;
     }
     .mySlides img{
-      width:30%;
+      width:400px;
       height:350px;
   }
   .subscribe{
@@ -619,6 +619,30 @@ width:60%;
     width:50%;
     text-align: center;
 }
+.brandlogo img{
+  height:15vh;
+}
+.slideshowflex{
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px 20px;
+  
+}
+.slideshowflex div:nth-child(1){
+  position: relative;
+  right:20px;
+}
+.slideshowflex div:nth-child(2){
+width:50%;
+margin:auto 50px;
+text-align: left;
+font-size: 30px;
+}
+.slideshowflex button{
+  margin:0;
+}
 }
 
 @media screen and (min-width:1440px){
@@ -636,4 +660,18 @@ width:60%;
     width:100%;
     text-align: center;
 }
+.slideshowflex{
+padding:0 100px;
+}
+.slideshowflex button{
+  padding:10px 40px;
+}
+.slideshowflex div:nth-child(1){
+  position: relative;
+  right:50px;
+}
+.slideshowflex div:nth-child(2){
+  font-size: 40px;
+}
+
 }
