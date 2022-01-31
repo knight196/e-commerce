@@ -480,7 +480,50 @@ button{
 #fillbasket{
   display:none;
 }
-
+/*brand logo*/
+.wrapper{
+  overflow: hidden;
+  text-align: center;
+}
+.slider{
+  width:100%;
+  height:100px;
+  position: relative;
+  background:white;
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.5);
+  display:flex;
+  overflow:hidden;
+}
+.slide{
+  height:100px;
+  display:flex;
+  align-items: center;
+  animation:slideshow 8s linear infinite;
+}
+.slide img{
+  height:70px;
+  padding:0 30px 0 30px;
+}
+.slider::before,.slider::after{
+  height:100px;
+  width:200px;
+  position: absolute;
+  content:'';
+  background:linear-gradient(to right, white 0%, rgba(255,255,255,0) 20%);
+z-index:2;
+}
+.slider::before{
+  left:0;
+  top:0;
+}
+@keyframes slideshow{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
 @media screen and (min-width:720px){
   .mySlides img{
     width:60%;
