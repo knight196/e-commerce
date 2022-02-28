@@ -153,7 +153,7 @@ fetch('data.json')
             var countless = document.querySelector('.count').innerHTML = --count;
            //if countless is equal to 0 then go back to homepage
             if(countless ==  0){
-               location.href="phoneshop.html";
+               location.href="index.html";
             }
             updateCartTotal();
          }
@@ -561,7 +561,7 @@ else{
 var finalconfirm = document.querySelector('.confirmbox')
 
 finalconfirm.addEventListener('click', () => {
-   location.href="phoneshop.html"
+   location.href="index.html"
 })
 
 
