@@ -252,19 +252,26 @@ position: relative;
     }
 
     .final-discount{
-      margin:20px 10px;
+      margin:20px auto;
       display:flex;
+      width:100%;
       justify-content: space-between;
       align-items: center;
+    }
+    .final-discount div:nth-child(2){
+      display:flex;
+      justify-content: flex-end;
     }
     .final-discount input{
       border:none;
       padding:5px;
+      width:50%;
     }
     .final-discount button{
       border:none;
-      margin-left:10px;
       padding:5px;
+      background:black;
+      color:white;
     }
     
 /*subscribe*/
