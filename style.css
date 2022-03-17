@@ -287,6 +287,11 @@ position: relative;
       border:none;
       text-align: center;
     }
+
+ .subscribe button{
+      padding:10px;
+      border:none;
+    }
     
 /*footer*/
     .footerinfo{
