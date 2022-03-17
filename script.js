@@ -504,6 +504,25 @@ loginpage.addEventListener('click', () => {
 
 });
 
+// subscribing
+var subscribebtn = document.querySelector('#subscribebtn')
+
+subscribebtn.addEventListener('click', () => {
+
+var subscribe = document.querySelector('#subscribe').value;
+
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+if(subscribe == ''){
+   alert('Please Enter your Email Id')
+}
+else if(!filter.test(subscribe)){
+   alert('Please Check your email Id')
+}
+else {
+   alert('Thank you for joining with us')
+}
+})
 
 document.getElementById('pay').addEventListener('click', payment)
 
