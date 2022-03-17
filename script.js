@@ -186,6 +186,7 @@ for(var i=0; i<cartbtn.length; i++){
    document.querySelector('.btnpurchase').style.display="block";
    document.getElementById('fillbasket').style.display="block";
    document.getElementById('emptybasket').style.display="none";
+   document.querySelector('.discounttag').style.display="none";
    updateCartTotal();
 }
 
@@ -230,6 +231,7 @@ cartRow.getElementsByClassName('cartquantity')[0].addEventListener('change', qua
 
 })
 
+
 //total item will be calculated
 function updateCartTotal(){
    var cartItemContainer = document.getElementsByClassName('shoppingcartitem')[0];
@@ -243,9 +245,29 @@ function updateCartTotal(){
       var quantity = quantityElement.value;
       total = total + (price * quantity);
    }
-   total = Math.round(total * 100) / 100;
-   document.getElementsByClassName('carttotal')[0].innerText = '£' + total;
+
+   
+   total = Math.round(total)
+
+   var total2 = Math.round(total * 0.1)
+   var discount = Math.round(total - total2);
+
+   var promoCode = document.querySelector('.discountCode').value
+   var discountBtn = document.querySelector('.discountbtn');
+
+   discountBtn.addEventListener('click', () => {
+      if(promoCode === 'PSHOP10'){
+document.getElementsByClassName('carttotal')[0].innerHTML = '£' + discount;
+document.querySelector('.discounttag').innerHTML = promoCode; 
+document.querySelector('.discounttag').style.display="block";
+
 }
+   })
+
+   document.getElementsByClassName('carttotal')[0].innerHTML = '£' + total;
+}
+
+
 
 //payment show
 var btnpurchase = document.querySelector('.btnpurchase')
