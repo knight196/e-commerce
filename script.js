@@ -62,8 +62,30 @@ function showSlides(n) {
     document.getElementById(tabweb).style.display="block";
     evt.currentTarget.className += 'active';
  }
-
  document.getElementById("defaultOpen").click();
+
+//slides per view
+
+function right(evt, scrollright){
+   var listcollection, rightside;
+
+   listcollection = document.getElementsByClassName('listcollection')
+
+   rightside = document.getElementsByClassName('right')
+
+   document.getElementById(scrollright).scrollLeft += 350;
+}
+
+function left (evt, scrollleft){
+   var listcollection, scrollleftside;
+
+   listcollection = document.getElementsByClassName('listcollection')
+
+   scrollleftside = document.getElementsByClassName('left')
+
+   document.getElementById(scrollleft).scrollLeft -= 350;
+}
+
 
  //mobile description
 fetch('data.json')
