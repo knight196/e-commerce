@@ -765,7 +765,7 @@ section .thumbnail{
   height:200px;
 }
 .arrow{
-display:none;
+display:block;
 }
 }
 
