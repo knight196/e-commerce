@@ -581,8 +581,7 @@ section{
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
-  scrollbar-color:black grey;
-  scrollbar-width:thin;
+  scrollbar-width:none;
   scroll-behavior: smooth;
 }
 section .thumbnail{
