@@ -622,6 +622,7 @@ section .thumbnail{
   padding:10px 0;
   background:black;
   color:white;
+display:none;
 }
 #slide-left{
   top: 40%;
@@ -762,6 +763,9 @@ section .thumbnail{
 .thumbnail img{
   width:250px;
   height:200px;
+}
+.arrow{
+display:none;
 }
 }
 
